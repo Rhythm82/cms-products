@@ -1,0 +1,48 @@
+# =========================
+# Node.js (backend + frontend)
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Environment files
+# =========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# =========================
+# Build outputs
+# =========================
+.next/
+dist/
+out/
+build/
+
+# =========================
+# Logs
+# =========================
+logs
+*.log
+
+# =========================
+# System / Misc
+# =========================
+.DS_Store
+*.pem
+
+# =========================
+# Vercel / Deployment
+# =========================
+.vercel
+
+# =========================
+# TypeScript (frontend)
+# =========================
+*.tsbuildinfo
+next-env.d.ts
