@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800 min-h-screen;
+}
+.glass {
+  @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl rounded-2xl;
+}
+
+.glass {
+  /* glassmorphism: translucent + blur + border */
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px) saturate(130%);
+  -webkit-backdrop-filter: blur(6px) saturate(130%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+
+  border-radius: 1rem;
+}
+
+.liquid-bg {
+  background: linear-gradient(120deg, #3a7bd5, #00d2ff);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
