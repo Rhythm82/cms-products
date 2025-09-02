@@ -16,7 +16,7 @@ export default function AdminPanel() {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products");
+      const res = await axios.get("https://cms-products-2.onrender.com/api/products");
       setProducts(res.data);
     } catch (err) {
       console.error("Error fetching products:", err);
@@ -28,7 +28,7 @@ export default function AdminPanel() {
       const product = products.find((p) => p.product_id === id);
       const newStatus = currentStatus === "Published" ? "Draft" : "Published";
 
-      await axios.put(`http://localhost:5000/api/products/${id}`, {
+      await axios.put(`https://cms-products-2.onrender.com/api/products/${id}`, {
         ...product,
         status: newStatus,
         updated_by: "admin",
@@ -42,7 +42,7 @@ export default function AdminPanel() {
 
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/products/${id}`, {
+      await axios.delete(`https://cms-products-2.onrender.com/api/products/${id}`, {
         data: { updated_by: "admin" },
       });
       setDeleteTarget(null);
